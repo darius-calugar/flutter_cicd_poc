@@ -51,15 +51,15 @@ pipeline {
                 }
             }
         }
-        stage('Distribute Android APK') {
-            steps {
-                appCenter apiToken: 'API_TOKEN_HERE',
-                        ownerName: 'OWNER_NAME',
-                        appName: 'APP_NAME',
-                        pathToApp: 'build/app/outputs/apk/release/app-arm64-v8a-release.apk',
-                        distributionGroups: 'DISTRIBUTION_GROUP'
-            }
-        }
+//         stage('Distribute Android APK') {
+//             steps {
+//                 appCenter apiToken: 'API_TOKEN_HERE',
+//                         ownerName: 'OWNER_NAME',
+//                         appName: 'APP_NAME',
+//                         pathToApp: 'build/app/outputs/apk/release/app-arm64-v8a-release.apk',
+//                         distributionGroups: 'DISTRIBUTION_GROUP'
+//             }
+//         }
         stage('Flutter Build iOS') {
             steps {
                 script {

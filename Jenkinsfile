@@ -30,6 +30,11 @@ pipeline {
                 sh "flutter doctor -v"
             }
         }
+        stage ('Pub get') {
+            steps {
+                sh "flutter pub get"
+            }
+        }
         stage ('Flutter Analyze') {
             steps {
                 sh "dart analyze . --fatal-infos"

@@ -8,6 +8,13 @@ pipeline {
         PATH = "/Users/jenkins/.rbenv/shims:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin:/Users/jenkins/Documents/flutter/bin:/usr/local/Caskroom/android-sdk/4333796//tools:/usr/local/Caskroom/android-sdk/4333796//platform-tools:/Applications/Xcode.app/Contents/Developer"
     }
     stages {
+        stage ('Info') {
+            steps {
+                sh "echo $PATH"
+                sh "echo $HOME"
+                sh "echo $ANDROID_HOME"
+            }
+        }
 //         stage ('Checkout') {
 //             steps {
 //                 step([$class: 'WsCleanup'])
